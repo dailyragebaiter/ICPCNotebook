@@ -23,7 +23,7 @@ const int mod = 1e9 + 7;
 // int Rand (int l, int r) {return uniform_int_distribution <int> (l, r) (rd);}
 
 inline void Solve () {
-    
+    i
     return;
 }
 
