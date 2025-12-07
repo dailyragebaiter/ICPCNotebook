@@ -1,23 +1,3 @@
-#include <bits/stdc++.h>
- 
-#define task   "BriantheCrab"
- 
-#define int    long long
-#define pii    pair <int, int>
-#define fi     first
-#define se     second
-#define szf    sizeof
-#define sz(s)  (int)((s).size())
- 
-using namespace std;
- 
-template <class T> void mini (T &t, T f) {if (t > f) t = f;}
-template <class T> void maxi (T &t, T f) {if (t < f) t = f;}
- 
-const int maxN = 2e5 + 5;
-const int inf = 1e18 + 7;
-const int mod = 1e9 + 7;
- 
 int n, k;
 int sz[maxN], cnt[maxN], L[maxN];
 bool del[maxN];
@@ -103,18 +83,3 @@ void solve () {
     cout << cal (1);
     return;
 }
- 
-signed main () {
-    cin.tie (nullptr) -> sync_with_stdio (false);
-    if (fopen (task".inp", "r")) {
-        freopen (task".inp", "r", stdin);
-        freopen (task".out", "w", stdout);
-    }
-    int t = 1;
-    //cin >> t;
-    while (t --) {
-        solve ();
-    } 
-    return 0;
-}
-// thfdgb
