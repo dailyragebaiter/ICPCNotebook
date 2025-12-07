@@ -1,24 +1,3 @@
-#include <bits/stdc++.h>
-
-#define task   "htgdtctn"
-
-#define int    long long
-#define pii    pair <int, int>
-#define fi     first
-#define se     second
-#define szf    sizeof
-#define sz(s)  (int)((s).size())
-#define all(v) (v).begin(), (v).end()
-
-using namespace std;
-
-template <class T> void minimize (T &t, T f) {if (t > f) t = f;}
-template <class T> void maximize (T &t, T f) {if (t < f) t = f;}
-
-const int maxN = 1e5 + 5;
-const int inf = 1e18 + 7;
-const int mod = 1e9 + 7;
-
 struct Fenwick {
     int n;
     vector <int> bit;
@@ -288,16 +267,3 @@ inline void Solve () {
     return;
 }
 
-signed main () {
-    cin.tie (nullptr) -> sync_with_stdio (false);
-    if (fopen (task".inp", "r")) {
-        freopen (task".inp", "r", stdin);
-        freopen (task".out", "w", stdout);
-    }
-    int t = 1;
-    while (t --) {
-        Solve ();
-    } 
-    return 0;
-}
-// wake me up when September ends
