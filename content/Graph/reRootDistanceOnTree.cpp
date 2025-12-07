@@ -1,7 +1,3 @@
-#include <bits/stdc++.h>
-
-using namespace std;
-
 int dist[2][200000];
 vector<int> adj[200000];
 
@@ -35,4 +31,5 @@ int main() {
 		cout << max(dist[0][i], dist[1][i]) << " \n"[i == n - 1];
 	}
 	return 0;
+
 }
