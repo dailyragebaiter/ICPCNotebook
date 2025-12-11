@@ -1,36 +1,24 @@
 #include <bits/stdc++.h>
 
-#define task     "BriantheCrab"
-
-#define int    long long
-#define pii    pair <int, int>
-#define fi     first
-#define se     second
-#define szf    sizeof
-#define sz(s)  (int)((s).size())
-#define all(v) (v).begin(), (v).end()
+#define int long long
 
 using namespace std;
 
 mt19937_64 rd (chrono :: steady_clock :: now ().time_since_epoch ().count ());
+int Rand (int l, int r) {return uniform_int_distribution <int> (l, r) (rd);}
 
-long long Rand (long long l, long long r)
-{
-    return uniform_int_distribution <long long> (l, r) (rd);
+void Solve () {
+    cout << Rand (1, 50);
 }
 
-void gen ()
-{
-    freopen ("bai1.inp", "w", stdout);
-    int n = Rand(5, 5e3);
-    cout << n << '\n';
-    for (int i = 1; i <= n; i ++) {
-        cout << Rand (1, 2e2) << ' ';
+signed main () {
+    ios_base :: sync_with_stdio (0);
+    cin.tie (0);
+    freopen ("task.inp", "w", stdout);
+    int t = 1;
+    // cin >> t;
+    while (t --) {
+        Solve ();
     }
-}
-
-signed main ()
-{
-    gen ();
     return 0;
 }
