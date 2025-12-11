@@ -1,19 +1,32 @@
 #include <bits/stdc++.h>
+
+#define int long long
+
 using namespace std;
 
-signed main(void) {
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL); cout.tie(NULL);
+void Solve () {
+    int cnt = 0;
+    while (true) {
+        system ("./gen");
+        system ("./main");
+        system ("./brute");
+        if (system ("diff task.out task.ans > /dev/null")) {
+            cout << "sad";
+            return;
+        }
+        else {
+            cout << "AC on test " << ++cnt << endl;
+        }
+    }
+}
 
-	while (true) { // for (int t = 1; t <= ...; t++)
-		system("gen.exe");
-		system("bai1.exe");
-		system("bai1_bf.exe");
-		if (system("fc bai1.out bai12.out") == 1) {
-			cout << "Difference is found";
-			break;
-		}
-	}
-
-	return 0;
+signed main () {
+    ios_base :: sync_with_stdio (0);
+    //cin.tie (0);
+    int t = 1;
+    // cin >> t;
+    while (t --) {
+        Solve ();
+    }
+    return 0;
 }
