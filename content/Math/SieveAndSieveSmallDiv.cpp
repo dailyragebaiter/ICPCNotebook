@@ -44,6 +44,34 @@ namespace Sieve {
     }
 }
 
+struct SangDoan {
+    int check[maxN];
+ 
+    void sieve (int l, int r) {
+        for (int i = 2; i <= sqrt (r); i ++) {
+            for (int j = max (i * i, (l - i + 1) / i * i); j <= r; j += i) {
+                if (j - l < 0) {
+                    continue;
+                }
+                check[j - l] ++;
+                //cout << j - l << '\n';
+            }
+        }
+    }
+     
+    void Solve () {
+        int l, r;
+        cin >> l >> r;
+        sieve (l, r);
+        for (int i = l; i <= r; i ++) {
+            if (check[i - l] == 0 && i != 1) {
+                cout << i << ' ';
+            }
+        }
+        return;
+    }
+}
+
 void solve () {
     int n;
     cin >> n;
@@ -55,3 +83,4 @@ void solve () {
     }
     return;
 }
+
